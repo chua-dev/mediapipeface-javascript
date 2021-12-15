@@ -14,7 +14,7 @@ function drawResult(results) {
   if (results.detections.length > 0) {
     drawingUtils.drawRectangle(
         canvasCtx, results.detections[0].boundingBox,
-        {color: 'cyan', lineWidth: 4, fillColor: '#00000000'});
+        {color: '#90ee90', lineWidth: 2.5, fillColor: '#00000000'});
     //drawingUtils.drawLandmarks(canvasCtx, results.detections[0].landmarks, {
     //  color: 'purple',
     //  radius: 3,
@@ -39,7 +39,7 @@ const camera = new Camera(videoElement, {
   onFrame: async () => {
     await faceDetection.send({image: videoElement});
   },
-  width: 600,
-  height: 480
+  width: 260,
+  height: 240
 });
 camera.start();
