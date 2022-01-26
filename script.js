@@ -15,6 +15,7 @@ function drawResult(results) {
     drawingUtils.drawRectangle(
         canvasCtx, results.detections[0].boundingBox,
         {color: '#90ee90', lineWidth: 2.5, fillColor: '#00000000'});
+    console.log(results)
     //drawingUtils.drawLandmarks(canvasCtx, results.detections[0].landmarks, {
     //  color: 'purple',
     //  radius: 3,
